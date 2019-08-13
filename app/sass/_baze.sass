@@ -1,0 +1,448 @@
+@import "fonts"
+@import "vars"
+
+::placeholder
+	color: #c0c0c0
+
+::selection
+	background-color: $accent
+	color: #fff
+
+*, ::after, ::before
+	box-sizing: border-box
+*
+	outline: none	
+body,html 
+	height: auto
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.4
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	position: relative
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		font-family: $default-font
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.hidden
+	display: none
+
+.title-section
+	font-size: 32px
+	font-weight: normal
+	color: $text
+	text-transform: uppercase	
+	margin-bottom: 12px
+	margin-top: 20px
+	+media-xs(down)
+		font-size: 26px
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.accent-info
+	font-size: 18px
+	font-weight: 500
+
+.phone
+	text-decoration: none
+	color: $text
+	transition: $trans
+	border-bottom: 1px solid #fff
+	&:hover, &:focus
+		text-decoration: none
+		border-bottom: 1px solid $text
+
+.link 
+	text-decoration: underline
+	color: $text 
+	&:hover, &:focus
+		text-decoration: none
+
+.text-center
+	text-align: center
+
+.title-block
+	font-size: 32px
+	font-weight: normal	
+
+.title-page 
+	font-size: 40px
+	text-transform: uppercase	
+	font-weight: normal
+	+media-xs(down)
+		font-size: 30px
+
+.title-item
+	font-size: 16px
+	margin: 0	
+	color: #9a9a9a
+	font-weight: normal
+
+.plus
+	display: inline-block
+	width: 24px
+	height: 24px
+	border-radius: 50% 
+	border: 2px solid #bababa
+	line-height: 17px
+	font-size: 30px
+	text-align: center
+
+.date
+	color: #949494
+	text-decoration: none
+
+.btn
+	color: #fff
+	background: linear-gradient(-90deg, #0426a3, #1a3cb6)
+	position: relative
+	z-index: 0
+	text-decoration: none
+	font-size: 20px
+	border-radius: 3px
+	padding: 10px 25px
+	transition: $trans
+	display: inline-block
+	text-align: center
+	+media-xs(down)
+		font-size: 16px
+	&::before
+		content: ''
+		position: absolute
+		top: 0
+		bottom: 0
+		right: 0
+		left: 0
+		background: linear-gradient(-90deg, darken(#0426a3 ,10%), darken(#1a3cb6, 10%) )
+		transition: $trans
+		opacity: 0
+		z-index: -1
+		border-radius: 3px
+	&:hover::before, &:focus::before
+		opacity: 1
+	.plus
+		position: relative 
+		top: 3px
+		margin-left: 7px
+	.fa-angle-left
+		margin-right: 10px
+.btn-green
+	color: #000
+	background: $green
+	&:hover, &:focus
+		background: darken($green ,10%)
+	&::before
+		display: none
+.btn-grey
+	color: #9a9a9a
+	background: #f4f4f4
+	&:hover, &:focus
+		background: darken(#f4f4f4 ,10%)
+	&::before
+		display: none	
+.btn-white
+	color: #9a9a9a
+	background: #ffffff
+	&:hover, &:focus
+		background: darken(#ffffff ,10%)
+	&::before
+		display: none				
+
+.equalheight-block
+	width: 100%
+	position: relative
+	display: block
+	&__wrap
+		overflow: hidden
+		position: relative
+		width: 100%
+		padding-bottom: 100%	//пропорции блока определяются здесь
+	&__content	
+		position: absolute 
+		top: 0
+		bottom: 0
+		right: 0
+		left: 0
+		background-size: cover
+		background-position: center
+	&__img		
+		position: absolute 
+		top: 0
+		bottom: 0
+		right: 0
+		left: 0
+		background-size: cover
+		background-position: center
+
+
+.sidebar
+	margin-top: 30px
+	+media-lg(up)
+		margin-top: 0
+	&__title
+		margin-top: 0
+		font-size: 20px
+		+media-md(up)
+			font-size: 24px
+		+media-lg(up)
+			font-size: 26px
+		+media-xl(up)
+			font-size: 32px
+	&__list 
+		padding: 0
+		margin: 0
+		display: flex
+		flex-direction: row
+		+grid-in()
+		+media-lg(up)
+			flex-direction: column
+		li 
+			list-style-type: none
+			+col-sm(6)
+			+col-md(4)
+			+col-lg(12)
+			+col-xs(12)
+
+		&-block	
+			background-color: #f4f4f4
+			display: block
+			margin-bottom: 10px
+			padding: 12px 20px
+			text-decoration: none
+			color: $text
+			+media-xs(down)
+				padding: 
+					top: 20px
+					bottom: 20px			
+			&:hover .sidebar__list-block-title, &:focus .sidebar__list-block-title
+				text-decoration: none
+			&-title
+				text-decoration: underline
+				font-size: 18px
+				line-height: 18px	
+
+
+.img-block
+	position: relative
+	width: 100% 
+	margin: auto
+	margin-bottom: 30px
+	box-shadow: $shadow
+	background: transparent 
+	overflow: hidden
+	&__info
+		background-color: #fff
+		display: inline-block
+		padding: 10px 15px
+		position: absolute
+		top: 30px
+		left: 30px
+		+media-xs(down)
+			position: static	
+	&__img
+		margin: auto
+		display: block
+		width: 100%
+		height: auto	
+
+.item-info
+	background-color: #fff
+	display: inline-block
+	padding: 10px 15px
+	position: absolute
+	top: 30px
+	left: 30px	
+
+.bread-crumbs	
+	background-color: #f4f4f4
+	padding: 10px 0
+	&__link 
+		text-decoration: underline
+		color: #949494 
+		font-size: 18px
+		font-weight: 300
+		+media-xs(down)
+			font-size: 16px
+		&:hover, &:focus 
+			text-decoration: none
+			color: darken(#949494 ,10%)
+	&__active 
+		font-size: 18px
+		+media-xs(down)
+			font-size: 16px		
+	&__separator
+		background-color: $accent 
+		border-radius: 50% 
+		width: 4px
+		height: 4px		
+		display: inline-block
+		margin: 0 5px
+		position: relative
+		top: -3px
+		
+.social
+	text-align: right
+	& > a
+		background-color: #fff
+		color: #b4b4b4
+		border-radius: 50%
+		width: 40px
+		height: 40px
+		display: inline-block
+		text-align: center
+		transition: $trans
+		line-height: 40px
+		&:hover, &:focus
+			color: darken(#b4b4b4 ,10%)
+		i 
+			font-size: 20px
+	& > a.hidden 
+		display: none		
+
+// 
+.checkbox-block
+	display: inline-block
+	margin-bottom: 10px
+	position: relative
+	&__input
+		position: absolute
+		z-index: -1
+		opacity: 0
+		transition: $trans
+		&:checked + .checkbox-block__text::after
+			opacity: 1
+	&__text
+		position: relative
+		transition: $trans
+		font-size: 16px
+		text-align: left
+		padding: 
+			left: 28px
+		+media-xs(down)
+			font-size: 14px		
+		&::before
+			content: ''
+			position: absolute
+			left: 0
+			top: 5px
+			width: 18px
+			height: 18px
+			border-radius: 3px	
+			cursor: pointer	
+			background-color: #dbdbdb
+		&::after
+			content: "\f00c"
+			font-family: FontAwesome
+			position: absolute
+			color: #3f3f3f
+			font-size: 13px
+			left: 3px
+			top: 4px
+			transition: $trans
+			opacity: 0
+			cursor: pointer						
+
+//magnific
+body
+	&.magnificpopupnoscroll
+		overflow-y: hidden !important
+.mfp-close-btn-in .mfp-close
+	color: $text
+	font-size: 40px
+	transition: $trans
+	&:active
+		top: 0
+.mfp-forms
+	&.mfp-bg
+		opacity: 0
+		-webkit-transition: all 0.25s ease-out
+		-moz-transition: all 0.25s ease-out
+		transition: all 0.25s ease-out
+		&.mfp-ready
+			opacity: 0.8
+		&.mfp-removing
+			opacity: 0
+	&.mfp-wrap
+		.mfp-content
+			opacity: 0
+			-webkit-transition: all 0.25s ease-out
+			-moz-transition: all 0.25s ease-out
+			transition: all 0.25s ease-out
+		&.mfp-ready .mfp-content
+			opacity: 1
+		&.mfp-removing .mfp-content
+			opacity: 0				
+				
+// .input-buffer
+// 	width: 100px
+// 	min-width: 10px
+// .buffer
+// 	position: absolute
+// 	top: -1000px
+// 	left: -1000px
+// 	visibility: hidden
+// 	white-space: nowrap			
+// mm-panels 
+.mm-listitem 
+	&::after
+		left: 0
+	& > a
+		background: #fff
+		&:hover, &:focus 
+			background: #eee
+// grid
+.logo-col
+	order: 0
+	+col
+	+col-sm(2)
+	+col-md(2)
+	+col-lg(2)
+	+col-xl(2)
+	+col-xs(4,no)
+	+media-xs(down)			
+.nav-col
+	order: 2
+	// +col
+	// +col-sm(2)
+	// +col-md(2)
+	// +col-lg(2)
+	flex-basis: 20px	
+	+col-xl(7)
+	+col-xs(2,no)
+	+media-xl(up)
+		oreder: 1		
+	+media-xs(down)	
+	.hamburger
+		margin-left: 15px
+.callback-block-col	
+	order: 1
+	flex: 1
+	+col-xl(3)
+	+col-xs(6,no)
+	+media-xl(up)
+		order: 2
+	+media-xs(down)	
+.header-nav-block
+	& > .flex 
+		+media-xs(down)
+      padding:
+        left: $padding / 2
+        right: $padding / 2	
+												 
+span.min
+	font-size: 14px
+	+media-md(up)
+		font-size: 16px

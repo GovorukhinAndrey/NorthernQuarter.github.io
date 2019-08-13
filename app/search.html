@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+
+	<title>Поиск квартир</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	<!-- Template Basic Images Start -->
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="icon" href="img/favicon/favicon.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+	<!-- Template Basic Images End -->
+	
+	<!-- Custom Browsers Color Start -->
+	<meta name="theme-color" content="#000">
+	<!-- Custom Browsers Color End -->
+
+	<link rel="stylesheet" href="css/main.min.css">
+
+</head>
+
+<body>
+
+	<!-- Custom HTML -->
+
+	<div id="wrapper" class="wrapper">
+		<header id="header" class="header">
+					<div class="top-header">
+						<div class="flex">
+							<div class="col4-md-12">
+							</div>
+							<div class="col4-md-12 text-center">Официальный сайт застройщика</div>
+							<div class="col4-md-12 social">
+								<a target="_blank" href="https://vk.com/sevkvartal"><i class="fa fa-vk" aria-hidden="true"></i></a>
+								<a target="_blank" href="https://m.facebook.com/sevkvartal/?ref=bookmarks"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+								<a target="_blank" href="https://www.instagram.com/sevkvartal/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+								<a target="_blank" href="#"><i class="fa fa-odnoklassniki" aria-hidden="true"></i></a>
+							</div>
+						</div>
+					</div>
+					<div id="header-nav-block" class="header-nav-block ">
+						<div class="flex">
+							<div class="logo-col">
+								<a href="/" class="header__logo">
+									<img src="../img/main-logo.png" alt="">
+								</a>
+							</div>
+							<div class="nav-col">
+			
+								<div class="hamburger-wrap">
+									<button class="hamburger hamburger--spring" type="button">
+										<span class="hamburger-box">
+											<span class="hamburger-inner"></span>
+										</span>
+									</button>						
+								</div>
+			
+								<nav role="navigation" id="navigation" class="">
+									<ul class="sf-menu list menu">
+										<li><a class=" menu__item" href="about.html">О компании</a></li>
+										<li><a class=" menu__item" href="search.html">Поиск квартиры</a></li>
+										<li><a class=" menu__item" href="shares.html">Акции</a></li>
+										<li><a class=" menu__item" href="news.html">Новости</a></li>
+										<li><a class=" menu__item" href="contacts.html">Контакты</a> </li>
+									</ul>                                     
+								</nav>
+			
+							</div>
+							<div class="callback-block-col header__callback-block">
+								<a href="#callback" class="open-popup btn header__callback-btn">
+									<span>+7 (3452) 690-392</span>заказать звонок
+								</a>
+							</div>
+						</div>
+					</div>
+		</header>
+		<div id="content" class="content">
+			<div class="bread-crumbs">
+				<div class="container">
+					<a href="/" class="bread-crumbs__link">Главная</a>
+					<span class="bread-crumbs__separator"></span>
+					<span class="bread-crumbs__active">Поиск квартиры</span>
+				</div>
+			</div>
+			<div class="search-page">
+				<div class="container">
+					<h1 class="title-page">Поиск квартиры</h1>
+				</div>
+				<div class="apartment-search-line-wrap">
+					<div class="container">
+						<form action="" class="apartment-search-line">
+							<div class="apartment-search-line__form-group apartment-search-line__col-quantity">
+								<h3 class="apartment-search-line__form-group-title">Количество комнат</h3>
+								<div class="apartment-search-line__checkbox-wrap">
+									<label> 
+										<input type="checkbox" name="" checked>
+										<span>студия </span>
+									</label>
+									<label> 
+										<input type="checkbox" name="" >
+										<span>1к</span> 
+									</label>
+									<label> 
+										<input type="checkbox" name="" >
+										<span>2к</span> 
+									</label>
+									<label> 
+										<input type="checkbox" name="">
+										<span>3к</span> 
+									</label>
+
+								</div>
+							</div>
+							<div class="apartment-search-line__form-group apartment-search-line__col-square ">
+								<h3 class="apartment-search-line__form-group-title">Площадь квартиры</h3>
+								<div class="range-wrap range-wrap-sq">
+									<div id='range-sq' class="range1">
+									</div>
+									<label>
+										от
+										<input id='range_inpt1-sq' class='input-buffer range_inpt1' type='text' data-custommin="30" data-min="30">
+										<span>m<sup>2</sup></span>
+									</label>
+									<label>
+										до
+										<input id='range_inpt2-sq' class='input-buffer range_inpt2' type='text' data-custommax="120" data-max="120">
+										<span>m<sup>2</sup></span>
+									</label>
+									
+								</div>
+							</div>
+							<div class="apartment-search-line__form-group apartment-search-line__col-price">
+								<h3 class="apartment-search-line__form-group-title">Стоимость квартиры</h3>
+								<div class="range-wrap range-wrap-price">
+									<div id='range-price' class="range1">
+									</div>
+									<label>
+										от
+										<input id='range_inpt1-price' class='input-buffer range_inpt1' type='text' data-custommin="1002350" data-min="1002350">
+										<span>руб.</span>
+									</label>
+									<label>
+										до
+										<input id='range_inpt2-price' class='input-buffer range_inpt2' type='text' data-custommax="4995762" data-max="4995762">
+										<span>руб.</span>
+									</label>
+									
+								</div>								
+							</div>
+							<div class="apartment-search-line__form-group apartment-search-line__col-btn">
+								<button class="apartment-search-line__btn" >Подобрать</button>
+							</div>
+						</form>
+					</div>					
+				</div>
+				<div class="container">
+					<h2 class="title-section">Найдено <span>100</span> квартир от <span>1 450 000</span> руб. до <span>3 444 000</span> руб.</h2>
+				</div>
+				<div class="result-wrapper">
+					<div class="container">
+						<div class="result-wrap">
+							<div class="result">
+								<div class="row_flex result__title">
+									<div class="colg2">Тип квартиры</div>
+									<div class="colg1">Объект</div>
+									<div class="colg2">Срок сдачи</div>
+									<div class="colg1">Этаж</div>
+									<div class="colg2">Площадь</div>
+									<div class="colg2">Цена</div>
+									<div class="colg2">Цена в ипотеку</div>
+								</div>
+								<div class="result__content">
+									<a href="#search-apartment-popup1" class=" open-popup result__content-item">
+										<div class="result__content-col result__content-col-type ">
+											<span class="result__content-col-title">Тип квартиры</span>
+											<span class="result__content-col-value">Студия</span> 
+										</div>
+										<div class="result__content-col result__content-col-obj ">
+											<span class="result__content-col-title">Объект</span>
+											<span class="result__content-col-value">ГП 6.2</span>  
+										</div>
+										<div class="result__content-col result__content-col-date ">
+											<span class="result__content-col-title">Срок сдачи</span>
+											<span class="result__content-col-value">IV кв. 2018</span>  
+										</div>
+										<div class="result__content-col result__content-col-floor ">
+											<span class="result__content-col-title">Этаж</span>
+											<span class="result__content-col-value">2</span>  
+										</div>
+										<div class="result__content-col result__content-col-square ">
+											<span class="result__content-col-title">Площадь</span>
+											<span class="result__content-col-value"><span>40,95</span> м<sup>2</sup></span> 
+										</div>
+										<div class="result__content-col result__content-col-price ">
+											<span class="result__content-col-title">Цена</span>
+											<span class="result__content-col-value"><span>1 200 000</span> руб</span>  
+										</div>
+										<div class="result__content-col result__content-col-mortgage ">
+											<span class="result__content-col-title">Цена в ипотеку</span>
+											<span class="result__content-col-value">от <span>4 500</span> руб/мес</span>  
+										</div>
+									</a>
+									<a href="#search-apartment-popup1" class=" open-popup result__content-item">
+											<div class="result__content-col result__content-col-type ">
+												<span class="result__content-col-title">Тип квартиры</span>
+												<span class="result__content-col-value">Студия</span> 
+											</div>
+											<div class="result__content-col result__content-col-obj ">
+												<span class="result__content-col-title">Объект</span>
+												<span class="result__content-col-value">ГП 6.2</span>  
+											</div>
+											<div class="result__content-col result__content-col-date ">
+												<span class="result__content-col-title">Срок сдачи</span>
+												<span class="result__content-col-value">IV кв. 2018</span>  
+											</div>
+											<div class="result__content-col result__content-col-floor ">
+												<span class="result__content-col-title">Этаж</span>
+												<span class="result__content-col-value">2</span>  
+											</div>
+											<div class="result__content-col result__content-col-square ">
+												<span class="result__content-col-title">Площадь</span>
+												<span class="result__content-col-value"><span>40,95</span> м<sup>2</sup></span> 
+											</div>
+											<div class="result__content-col result__content-col-price ">
+												<span class="result__content-col-title">Цена</span>
+												<span class="result__content-col-value"><span>1 200 000</span> руб</span>  
+											</div>
+											<div class="result__content-col result__content-col-mortgage ">
+												<span class="result__content-col-title">Цена в ипотеку</span>
+												<span class="result__content-col-value">от <span>4 500</span> руб/мес</span>  
+											</div>
+									</a>	
+									<a href="#search-apartment-popup1" class=" open-popup result__content-item">
+											<div class="result__content-col result__content-col-type ">
+												<span class="result__content-col-title">Тип квартиры</span>
+												<span class="result__content-col-value">Студия</span> 
+											</div>
+											<div class="result__content-col result__content-col-obj ">
+												<span class="result__content-col-title">Объект</span>
+												<span class="result__content-col-value">ГП 6.2</span>  
+											</div>
+											<div class="result__content-col result__content-col-date ">
+												<span class="result__content-col-title">Срок сдачи</span>
+												<span class="result__content-col-value">IV кв. 2018</span>  
+											</div>
+											<div class="result__content-col result__content-col-floor ">
+												<span class="result__content-col-title">Этаж</span>
+												<span class="result__content-col-value">2</span>  
+											</div>
+											<div class="result__content-col result__content-col-square ">
+												<span class="result__content-col-title">Площадь</span>
+												<span class="result__content-col-value"><span>40,95</span> м<sup>2</sup></span> 
+											</div>
+											<div class="result__content-col result__content-col-price ">
+												<span class="result__content-col-title">Цена</span>
+												<span class="result__content-col-value"><span>1 200 000</span> руб</span>  
+											</div>
+											<div class="result__content-col result__content-col-mortgage ">
+												<span class="result__content-col-title">Цена в ипотеку</span>
+												<span class="result__content-col-value">от <span>4 500</span> руб/мес</span>  
+											</div>
+									</a>
+									<a href="#search-apartment-popup1" class=" open-popup result__content-item">
+											<div class="result__content-col result__content-col-type ">
+												<span class="result__content-col-title">Тип квартиры</span>
+												<span class="result__content-col-value">Студия</span> 
+											</div>
+											<div class="result__content-col result__content-col-obj ">
+												<span class="result__content-col-title">Объект</span>
+												<span class="result__content-col-value">ГП 6.2</span>  
+											</div>
+											<div class="result__content-col result__content-col-date ">
+												<span class="result__content-col-title">Срок сдачи</span>
+												<span class="result__content-col-value">IV кв. 2018</span>  
+											</div>
+											<div class="result__content-col result__content-col-floor ">
+												<span class="result__content-col-title">Этаж</span>
+												<span class="result__content-col-value">2</span>  
+											</div>
+											<div class="result__content-col result__content-col-square ">
+												<span class="result__content-col-title">Площадь</span>
+												<span class="result__content-col-value"><span>40,95</span> м<sup>2</sup></span> 
+											</div>
+											<div class="result__content-col result__content-col-price ">
+												<span class="result__content-col-title">Цена</span>
+												<span class="result__content-col-value"><span>1 200 000</span> руб</span>  
+											</div>
+											<div class="result__content-col result__content-col-mortgage ">
+												<span class="result__content-col-title">Цена в ипотеку</span>
+												<span class="result__content-col-value">от <span>4 500</span> руб/мес</span>  
+											</div>
+									</a>
+									<a href="#search-apartment-popup1" class=" open-popup result__content-item">
+											<div class="result__content-col result__content-col-type ">
+												<span class="result__content-col-title">Тип квартиры</span>
+												<span class="result__content-col-value">Студия</span> 
+											</div>
+											<div class="result__content-col result__content-col-obj ">
+												<span class="result__content-col-title">Объект</span>
+												<span class="result__content-col-value">ГП 6.2</span>  
+											</div>
+											<div class="result__content-col result__content-col-date ">
+												<span class="result__content-col-title">Срок сдачи</span>
+												<span class="result__content-col-value">IV кв. 2018</span>  
+											</div>
+											<div class="result__content-col result__content-col-floor ">
+												<span class="result__content-col-title">Этаж</span>
+												<span class="result__content-col-value">2</span>  
+											</div>
+											<div class="result__content-col result__content-col-square ">
+												<span class="result__content-col-title">Площадь</span>
+												<span class="result__content-col-value"><span>40,95</span> м<sup>2</sup></span> 
+											</div>
+											<div class="result__content-col result__content-col-price ">
+												<span class="result__content-col-title">Цена</span>
+												<span class="result__content-col-value"><span>1 200 000</span> руб</span>  
+											</div>
+											<div class="result__content-col result__content-col-mortgage ">
+												<span class="result__content-col-title">Цена в ипотеку</span>
+												<span class="result__content-col-value">от <span>4 500</span> руб/мес</span>  
+											</div>
+									</a>																																											
+								</div>
+							</div>
+						</div>
+						<a href="#" class="btn btn-white">Показать ещё <span class="plus">+</span></a>
+					</div>
+				</div>				
+			</div>
+		</div>
+	</div>
+	<footer id="footer" class="footer">
+			<div class="callback">
+					<div class="flex">
+						<div class="col5">
+							<h2 class="callback__title">Нужна консультация менеджера?</h2>
+						</div>
+						<div class="col7">
+							<form action="" class="flex callback-form">
+								<input class="colg6-sm-12 callback-form__input" type="text" placeholder="Ваш телефон" required>
+								<button class="colg6-sm-12 btn callback-form__btn">Получить консультацию</button>
+							</form>
+						</div>
+					</div>
+				</div>
+		<div class="contacts flex">
+			<div class="col3-md-3">
+				<a href="/" class="logo contacts__logo"><img src="../img/main-logo.png" alt="logo" class="img-responsive"></a>
+			</div>
+			<div class="col3-md-5 flex contacts__column">
+				<a href="#" class="link contacts__link">Квартиры</a>
+				<a href="#" class="link contacts__link">1 комнатные квартиры</a>
+				<a href="#" class="link contacts__link">2 комнатные квартиры</a>
+				<a href="#" class="link contacts__link">3 комнатные квартиры</a>
+			</div>
+			<div class="col2-md-4 flex contacts__column">
+				<a href="#" class="link contacts__link">Акции</a>
+				<a href="#" class="link contacts__link">Новости</a>
+				<a href="#" class="link contacts__link">О компании</a>
+				<a href="#" class="link contacts__link">Контакты</a>
+			</div>
+			<div class="col4-md-12 flex contacts__column">
+				<a href="#" class="link contacts__link">Офис продаж</a>
+				<span>Адрес: г. Тюмень, ул. Тимофея Чаркова 79а/3 стр.</span>
+				<span>Телефон: <a class="phone contacts__phone" href="tel:+73452690392">+7 (3452) 690-392</a></span>
+			</div>								
+		</div>
+		<div class="footer-bottom">
+			<div class="flex">
+				<div class="col4-sm-12 footer-bottom__copy">© 2018, ЖК “Северный Квартал”</div>
+				<div class="col4-sm-12 footer-bottom__title text-center">Официальный сайт застройщика </div>
+				<div class="col4-sm-12 footer-bottom__social social">
+					<a target="_blank" href="https://vk.com/sevkvartal"><i class="fa fa-vk" aria-hidden="true"></i></a>
+					<a target="_blank" href="https://m.facebook.com/sevkvartal/?ref=bookmarks"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+					<a target="_blank" href="https://www.instagram.com/sevkvartal/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+					<a target="_blank" href="#"><i class="fa fa-odnoklassniki" aria-hidden="true"></i></a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<div class="hidden">
+		<div id="search-apartment-popup1" class="about-apartment about-apartment-popup">
+				<div class="about-apartment__info">
+					<div class="flex about-apartment__header">
+						<div class="about-apartment__header-title">2к</div>
+						<img src="../img/apartment.png" alt="" class="about-apartment__header-img img-responsive">
+					</div>
+					<div class="flex about-apartment__price-block">
+						<div class="about-apartment__price-block-price">2 760 000 руб</div>
+						<div class="about-apartment__price-block-old-price">2 980 000 руб</div>
+					</div>
+					<div class="flex about-apartment__info-block">
+						<div class="colg4">
+							<span class="about-apartment__info-block-title">общая площадь</span>
+							<div class="about-apartment__info-block-value">40,95 <span>м2</span></div>
+						</div>
+						<div class="colg4">
+							<span class="about-apartment__info-block-title">номер квартиры</span>
+							<div class="about-apartment__info-block-value">30</div>
+						</div>
+						<div class="colg4">
+							<span class="about-apartment__info-block-title">этаж</span>
+							<div class="about-apartment__info-block-value">1</div>
+						</div>
+					</div>
+				</div>
+				<div class="about-apartment__btn-block flex">
+					<div class="colg6">
+						<a href="#" class="btn btn-green">Получить консультацию</a>
+					</div>
+					<div class="colg6">
+						<a href="#" class="btn">Как купить</a>
+					</div>
+				</div>
+			</div>		
+	</div>
+
+	<!-- callback -->
+	<div class="hidden">
+			<div id="callback" class="form-popup">
+				<h2 class="title-section" >заказать звонок</h2>
+				<form id="callback-form">
+					<!-- Hidden Required Fields -->
+					<input type="hidden" name="project_name" value="Северный квартал">
+					<input type="hidden" name="admin_email" value="admin@gmail.com">
+					<input type="hidden" name="form_subject" value="Заказать звонок">
+					<!-- END Hidden Required Fields -->
+					<div class="form-group">
+						<label>
+							<span class="form-group__title">ФИО</span> 
+							<input type="text" name="ФИО" placeholder="Иванов Иван Иванович" required>
+						</label>
+					</div>
+					<div class="form-group">
+						<label> 
+							<span class="form-group__title">Телефон</span>
+							<input class="tel-input" type="text" name="Номер телефона" placeholder="+7 (999) 999 - 99 - 99" required>
+						</label>
+					</div>
+					
+					<div class="form-group">
+						<label class="checkbox-block">
+							<input id="input-check" class="checkbox-block__input" type="checkbox"  />
+							<div class="checkbox-block__text">Согласен на обработку персональных данных </div>
+						</label>			
+					</div>
+	
+					<button id="form-popup__btn" class="form-popup__btn btn btn-green form-popup__btn--disabled" disabled="disabled">Отправить заявку</button>
+					<!-- <button class="form-popup__btn btn btn-green form-popup__btn--disabled" disabled="disabled" >Отправить заявку</button>				 -->
+				</form>			
+			</div>
+	</div>
+
+	<script src="js/scripts.min.js"></script>
+</body>
+</html>
